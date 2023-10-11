@@ -1,0 +1,22 @@
+[project]
+name = "xrocket"
+description = "xRocket Python SDK"
+readme = "README.md"
+version = "0.1.0"
+authors = [
+    {name = "shibdev"},
+    {name = "vlad"}
+]
+dependencies = [
+    "httpx"
+]
+
+[project.urls]
+Homepage = "https://github.com/ClickoTON-Foundation/xrocket/"
+Documentation = "https://github.com/ClickoTON-Foundation/xrocket/"
+Repository = "https://github.com/ClickoTON-Foundation/xrocket/"
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]
+
