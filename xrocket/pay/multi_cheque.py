@@ -16,8 +16,8 @@ class Cheque:
 
     """
 
-    async def cheque_create(self, currency: str, amount: Union[int, float], activations: int,
-                                  ref_program: int, password: str = '', description: str = '',
+    async def cheque_create(self, currency: str, amount: Union[int, float], ref_program: int = 0,
+                                  activations: int = 1, password: str = '', description: str = '',
                                   send_notifications: bool = True, enable_captcha: bool = True,
                                   telegram_resources_ids: list = [], for_premium: bool = False,
                                   linked_wallet: bool = False, disabled_languages: list = []):

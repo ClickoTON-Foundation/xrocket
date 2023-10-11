@@ -14,9 +14,10 @@ class Invoice:
 
     """
 
-    async def invoice_create(self, amount: Union[int, float], min_payment: Union[int, float],
-                                   num_payments: int, currency: str, description: str = '',
+    async def invoice_create(self, amount: Union[int, float], currency: str,
+                                   description: str = '', num_payments: int = 1,
                                    hidden_message: str = '', comments_enabled: bool = False,
+                                   min_payment: Union[int, float, None] = None,
                                    callback_url: str = '', payload: str = '', expired_in: int = 0):
         """ Create invoice
 
@@ -37,6 +38,7 @@ class Invoice:
                                     'amount': amount,
                                     'minPayment': min_payment,
                                     'numPayments': num_payments,
+                                    'currency': currency,
                                     'description': description,
                                     'hiddenMessage': hidden_message,
                                     'commentsEnabled': comments_enabled,

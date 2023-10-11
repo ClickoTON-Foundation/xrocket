@@ -32,7 +32,7 @@ class App:
         """
 
         if not transfer_id:
-            transfer_id = os.urandom(32).hex()
+            transfer_id = os.urandom(10).hex()
 
         return await self.request(method = 'app/transfer',
                                   request_method = 'POST',
@@ -58,7 +58,7 @@ class App:
         """
 
         if not withdrawal_id:
-            withdrawal_id = os.urandom(32).hex()
+            withdrawal_id = os.urandom(25).hex()
 
         return await self.request(method = 'app/withdrawal',
                                   request_method = 'POST',
