@@ -23,7 +23,7 @@ class App:
                              transfer_id: Union[str, None] = None, description: str = ''):
         """ Make transfer of funds to another user
 
-        :param `user_id` [int]: Telegram user id
+        :param `user_id` [int]: Telegram user id of transfer
         :param `currency` [str]: Currency of transfer
         :param `amount` Union[int, float]: Amount of transfer
         :param `transfer_id` [int]: Id of transfer
