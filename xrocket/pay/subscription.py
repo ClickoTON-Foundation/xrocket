@@ -17,8 +17,10 @@ class Subscription:
 
     """
 
-    async def subscription_create(self, name: str, currency: str, chat_id: Union[int, str],
-                                        referral_percent: Union[int, float], return_url: str,
+    async def subscription_create(self, name: str, currency: str, 
+                                        chat_id: Union[int, str],
+                                        referral_percent: Union[int, float], 
+                                        return_url: str,
                                         description: str = '', interval: list = []):
         """ Create subscription
 
@@ -94,7 +96,9 @@ class Subscription:
                                   request_method = 'POST')
 
     async def subscription_interval_create(self, subscription_id: str,
-                                                 interval: str, amount: Union[int, float], status: str):
+                                                 interval: str, 
+                                                 amount: Union[int, float], 
+                                                 status: str):
         """ Create subscription interval
 
         :param `interval` [str]: Interval of subscription interval
@@ -111,7 +115,8 @@ class Subscription:
                                     'status': status
                                   })
 
-    async def subscription_interval_info(self, subscription_id: str, interval_code: str):
+    async def subscription_interval_info(self, subscription_id: str, 
+                                               interval_code: str):
         """ Get subscription interval info
 
         :param `subscription_id` [str]: Subscription id of subscription
@@ -119,8 +124,10 @@ class Subscription:
 
         """
 
-        return await self.request(method = f'subscriptions/{subscription_id}/interval/{interval_code}',
-                                  request_method = 'GET')
+        return await self.request(
+            method = f'subscriptions/{subscription_id}/interval/{interval_code}',
+            request_method = 'GET'
+        )
 
     async def subscription_interval_edit(self, subscription_id: str, interval_code: str,
                                                status: str):
@@ -132,13 +139,16 @@ class Subscription:
 
         """
 
-        return await self.request(method = f'subscriptions/{subscription_id}/interval/{interval_code}',
-                                  request_method = 'PUT',
-                                  json = {
-                                    'status': status
-                                  })
+        return await self.request(
+            method = f'subscriptions/{subscription_id}/interval/{interval_code}',
+            request_method = 'PUT',
+            json = {
+                'status': status
+            }
+        )
     
-    async def subscription_interval_delete(self, subscription_id: str, interval_code: str):
+    async def subscription_interval_delete(self, subscription_id: str, 
+                                                 interval_code: str):
         """ Delete subscription interval
 
         :param `subscription_id` [str]: Subscription id of subscription
@@ -146,5 +156,8 @@ class Subscription:
 
         """
 
-        return await self.request(method = f'subscriptions/{subscription_id}/interval/{interval_code}',
-                                  request_method = 'DELETE')
+        return await self.request(
+            method = f'subscriptions/{subscription_id}/interval/{interval_code}',
+            request_method = 'DELETE'
+        )
+

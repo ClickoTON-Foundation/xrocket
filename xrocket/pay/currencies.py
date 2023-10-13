@@ -13,3 +13,4 @@ class Currencies:
 
         return await self.request(method = 'currencies/available',
                                   request_method = 'GET')
+

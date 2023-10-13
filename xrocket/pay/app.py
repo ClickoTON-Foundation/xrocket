@@ -20,7 +20,8 @@ class App:
                                   request_method = 'GET')
 
     async def transfer(self, user_id: int, currency: str, amount: Union[int, float],
-                             transfer_id: Union[str, None] = None, description: str = ''):
+                             transfer_id: Union[str, None] = None, 
+                             description: str = ''):
         """ Make transfer of funds to another user
 
         :param `user_id` [int]: Telegram user id of transfer
@@ -44,8 +45,10 @@ class App:
                                     'description': description
                                   })
 
-    async def withdrawal(self, network: str, address: str, currency: str, amount: Union[int, float],
-                               withdrawal_id: Union[str, None] = None, comment: str = ''):
+    async def withdrawal(self, network: str, address: str, 
+                               currency: str, amount: Union[int, float],
+                               withdrawal_id: Union[str, None] = None, 
+                               comment: str = ''):
         """ Make withdrawal of funds to external wallet
 
         :param `network` [str]: Network of withdrawal
@@ -70,3 +73,4 @@ class App:
                                     'withdrawalId': withdrawal_id,
                                     'comment': comment
                                   })
+

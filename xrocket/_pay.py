@@ -46,3 +46,4 @@ class PayAPI(App, Currencies, Invoice, Cheque, Subscription):
             return res
         except BaseException as e:
             return {'error': f"{e}"}
+

@@ -42,3 +42,4 @@ class Rates:
 
         return await self.request(method = f'rates/crypto/{base}/{quote}',
                                   request_method = 'GET')
+

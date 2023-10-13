@@ -23,3 +23,4 @@ class Account:
 
         return await self.request(method = f'account/balance/{coin}',
                                   request_method = 'GET')
+

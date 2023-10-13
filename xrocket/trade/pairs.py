@@ -23,3 +23,4 @@ class Pairs:
 
         return await self.request(method = f'pairs/{name}',
                                   request_method = 'GET')
+

@@ -12,7 +12,8 @@ class Orders:
 
     """
 
-    async def order_list(self, limit: int = 100, offset: int = 0, only_active: bool = True):
+    async def order_list(self, limit: int = 100, offset: int = 0, 
+                               only_active: bool = True):
         """ Get list of orders
 
         :param `limit` [int]: Limit of orders list
@@ -30,7 +31,8 @@ class Orders:
                                   })
 
     async def order_list_by_pair(self, pair: str,
-                                       limit: int = 100, offset: int = 0, only_active: bool = True):
+                                       limit: int = 100, offset: int = 0, 
+                                       only_active: bool = True):
         """ Get list of orders by pair
 
         :param `pair` [str]: Pair of order
@@ -81,7 +83,7 @@ class Orders:
         """
 
         return await self.request(method = f'orders/{order_id}',
-								  request_method = 'GET')
+                                  request_method = 'GET')
 
     async def order_delete(self, order_id: str):
         """ Delete order
@@ -92,3 +94,4 @@ class Orders:
 
         return await self.request(method = f'orders/{order_id}',
                                   request_method = 'DELETE')
+

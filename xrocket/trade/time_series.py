@@ -26,3 +26,4 @@ class TimeSeries:
                                     'endDate': end_date,
                                     'period': period
                                   })
+

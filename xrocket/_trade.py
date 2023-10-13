@@ -46,3 +46,4 @@ class TradeAPI(Account, OrderBook, Orders, Pairs, Rates, TimeSeries):
             return res
         except BaseException as e:
             return {'error': f"{e}"}
+

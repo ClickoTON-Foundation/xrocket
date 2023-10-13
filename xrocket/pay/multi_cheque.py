@@ -1,5 +1,4 @@
 from typing import Union
-import os
 
 
 class Cheque:
@@ -16,11 +15,17 @@ class Cheque:
 
     """
 
-    async def cheque_create(self, currency: str, amount: Union[int, float], ref_program: int = 0,
-                                  activations: int = 1, password: str = '', description: str = '',
-                                  send_notifications: bool = True, enable_captcha: bool = True,
-                                  telegram_resources_ids: list = [], for_premium: bool = False,
-                                  linked_wallet: bool = False, disabled_languages: list = []):
+    async def cheque_create(self, currency: str, 
+                                  amount: Union[int, float], 
+                                  ref_program: int = 0,
+                                  activations: int = 1, 
+                                  password: str = '', description: str = '',
+                                  send_notifications: bool = True, 
+                                  enable_captcha: bool = True,
+                                  telegram_resources_ids: list = [], 
+                                  for_premium: bool = False,
+                                  linked_wallet: bool = False, 
+                                  disabled_languages: list = []):
         """ Create cheque
 
         :param `currency` [str]: Currency of cheque
@@ -78,12 +83,16 @@ class Cheque:
         """
 
         return await self.request(method = f'multi-cheque/{cheque_id}',
-								  request_method = 'GET')
+                                  request_method = 'GET')
 
-    async def cheque_edit(self, cheque_id: str, password: str = '', description: str = '',
-								send_notifications: bool = True, enable_captcha: bool = True,
-                                telegram_resources_ids: list = [], for_premium: bool = False,
-                                linked_wallet: bool = False, disabled_languages: list = []):
+    async def cheque_edit(self, cheque_id: str, password: str = '', 
+                                description: str = '',
+								send_notifications: bool = True, 
+                                enable_captcha: bool = True,
+                                telegram_resources_ids: list = [], 
+                                for_premium: bool = False,
+                                linked_wallet: bool = False, 
+                                disabled_languages: list = []):
         """ Edit cheque
 
         :param `password` [str]: Password of cheque
@@ -119,3 +128,4 @@ class Cheque:
 
         return await self.request(method = f'multi-cheque/{cheque_id}',
                                   request_method = 'DELETE')
+

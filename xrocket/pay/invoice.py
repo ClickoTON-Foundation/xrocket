@@ -16,9 +16,11 @@ class Invoice:
 
     async def invoice_create(self, amount: Union[int, float], currency: str,
                                    description: str = '', num_payments: int = 1,
-                                   hidden_message: str = '', comments_enabled: bool = False,
+                                   hidden_message: str = '', 
+                                   comments_enabled: bool = False,
                                    min_payment: Union[int, float, None] = None,
-                                   callback_url: str = '', payload: str = '', expired_in: int = 0):
+                                   callback_url: str = '', 
+                                   payload: str = '', expired_in: int = 0):
         """ Create invoice
 
         :param `amount` Union[int, float]: Amount of invoice
@@ -81,3 +83,4 @@ class Invoice:
 
         return await self.request(method = f'tg-invoices/{invoice_id}',
                                   request_method = 'DELETE')
+

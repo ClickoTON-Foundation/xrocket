@@ -18,3 +18,4 @@ class OrderBook:
 
         return await self.request(method = f'order-book/full/{pair}',
                                   request_method = 'GET')
+
