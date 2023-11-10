@@ -11,7 +11,7 @@ class TradeAPI(Account, OrderBook, Orders, Pairs, Rates, TimeSeries):
     :license: MIT
     """
 
-    def __init__(self, api_key: str, api_url = "https://trade.ton-rocket.com"):
+    def __init__(self, api_key: str, api_url = "https://trade.ton-rocket.com", testnet=False):
         """
         Class initialization.
 
@@ -19,7 +19,10 @@ class TradeAPI(Account, OrderBook, Orders, Pairs, Rates, TimeSeries):
         """
 
         self.api_key = api_key
-        self.api_url = api_url
+        if testnet:
+            self.api_url = "https://dev-trade.ton-rocket.com"
+        else:
+            self.api_url = api_url
         self.client = AsyncClient(headers={'Rocket-Exchange-Key': self.api_key})
 
     async def request(self, method: str, request_method = "POST", **kwargs):

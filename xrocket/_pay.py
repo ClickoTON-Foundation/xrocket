@@ -11,7 +11,7 @@ class PayAPI(App, Currencies, Invoice, Cheque, Subscription):
     :license: MIT
     """
 
-    def __init__(self, api_key: str, api_url = "https://pay.ton-rocket.com"):
+    def __init__(self, api_key: str, api_url = "https://pay.ton-rocket.com", testnet=False):
         """
         Class initialization.
 
@@ -19,7 +19,10 @@ class PayAPI(App, Currencies, Invoice, Cheque, Subscription):
         """
 
         self.api_key = api_key
-        self.api_url = api_url
+        if testnet:
+            self.api_url = "https://dev-pay.ton-rocket.com"
+        else:
+            self.api_url = api_url
         self.client = AsyncClient(headers={'Rocket-Pay-Key': self.api_key})
 
     async def request(self, method: str, request_method = "POST", **kwargs):
