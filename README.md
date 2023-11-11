@@ -68,6 +68,8 @@ asyncio.run(main())
 
 ## Version History
 
+* 0.2.1
+    * Added testnet support
 * 0.2.0
     * Additions
 * 0.1.0
