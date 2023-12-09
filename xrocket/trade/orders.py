@@ -42,7 +42,7 @@ class Orders:
 
         """
 
-        return await self.request(method = f'orders/{pair}',
+        return await self.request(method = f'orders/pair/{pair}',
                                   request_method = 'GET',
                                   params = {
                                     'limit': limit,
