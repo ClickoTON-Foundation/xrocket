@@ -106,7 +106,7 @@ class Cheque:
 
         """
 
-        return await self.request(method = 'multi-cheque',
+        return await self.request(method = f'multi-cheque/{cheque_id}',
                                   request_method = 'PUT',
                                   json = {
                                     'password': password,
