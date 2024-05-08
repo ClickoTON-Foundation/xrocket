@@ -1,4 +1,6 @@
-# xRocket 
+# xRocket
+[![PyPI version](https://img.shields.io/pypi/v/xrocket)](https://pypi.org/project/xrocket)
+[![Downloads](https://static.pepy.tech/badge/xrocket)](https://pypi.org/project/xrocket)
 
 xRocket Python SDK.
 
@@ -84,7 +86,6 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 If you like the library, I will be glad to accept donations.
 
 * TON: EQCgphx8rTI0PukwmgpVqiPgqguTujhQscg2h7jgc4U0t347
-
 ## Acknowledgments
 
 * [xrocket-pay-docs](https://pay.ton-rocket.com/api)
